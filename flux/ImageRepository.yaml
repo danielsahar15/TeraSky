@@ -1,0 +1,8 @@
+apiVersion: source.toolkit.fluxcd.io/v1beta1
+kind: ImageRepository
+metadata:
+  name: terasky-repo
+  namespace: drfault
+spec:
+  image: dsahar/terasky
+  interval: 5m  # adjust the interval as needed

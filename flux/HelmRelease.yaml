@@ -1,0 +1,15 @@
+apiVersion: helm.fluxcd.io/v1
+kind: HelmRelease
+metadata:
+  name: terasky
+  namespace: default
+spec:
+  releaseName: hello-terasky
+  chart:
+    repository: "chartmuseum"
+    name: "hello"
+    version: "0.1.0"
+  values:
+    image:
+      repository: dsahar/terasky
+      tag: latest  

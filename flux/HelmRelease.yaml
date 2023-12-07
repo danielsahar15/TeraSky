@@ -7,9 +7,9 @@ metadata:
 spec:
   releaseName: terasky
   chart:
-    repository: chartmuseum
+    repository: http://localhost:8081
     name: hello
-    version: 0.2.0
+    version: 0.1.0
   values:
     image:
       repository: dsahar/terasky

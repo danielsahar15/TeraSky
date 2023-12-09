@@ -8,7 +8,7 @@ spec:
   chart:
     spec:
       chart: hello
-      version: '0.1.0'
+      version: latest
       sourceRef:
         kind: HelmRepository
         name: chartmuseum

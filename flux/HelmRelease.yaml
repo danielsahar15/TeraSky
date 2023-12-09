@@ -16,5 +16,5 @@ spec:
       interval: 1m
   values:
     image:
-      repository: dsahar/terasky
+      repository:  terasky-repo
       tag: latest

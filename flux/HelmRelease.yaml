@@ -18,3 +18,4 @@ spec:
     image:
       repository:  dsahar/terasky
       tag: latest
+    replicaCount: 2

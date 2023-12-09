@@ -10,12 +10,12 @@ spec:
       chart: hello
       version: latest
       sourceRef:
-        kind: HelmRepository
-        name: chartmuseum
+        kind: GitRepository
+        name: terasky-git
         namespace: flux-system
       interval: 1m
   values:
     image:
       repository:  dsahar/terasky
       tag: latest
-    replicaCount: 2
+    replicaCount: 1

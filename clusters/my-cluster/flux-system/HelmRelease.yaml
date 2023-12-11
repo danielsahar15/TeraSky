@@ -5,6 +5,7 @@ metadata:
   namespace: default
 spec:
   interval: 5m
+  releaseName: petclinic-release
   chart:
     spec:
       chart: hello
@@ -14,8 +15,10 @@ spec:
         name: chartmuseum
         namespace: flux-system
       interval: 1m
+  update:
+    strategy: "auto"
   values:
     image:
       repository:  dsahar/terasky
-      tag: 0.0.3
+      tag: "*"
     replicaCount: 1

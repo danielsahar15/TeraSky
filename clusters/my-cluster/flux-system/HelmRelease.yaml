@@ -1,14 +1,14 @@
 apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
-  name: hello-release-3
+  name:  petclinic-release
   namespace: default
 spec:
   interval: 5m
   chart:
     spec:
       chart: hello
-      version: latest
+      version: 0.1.0
       sourceRef:
         kind: GitRepository
         name: terasky-git

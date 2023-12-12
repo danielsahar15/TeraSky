@@ -5,7 +5,7 @@
 replicaCount: 1
 
 image:
-  repository: dsahar/terasky
+  #repository: dsahar/terasky
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
   tag: latest

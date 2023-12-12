@@ -19,5 +19,6 @@ spec:
       remediateLastFailure: true 
   values:
     image:
-    repository: dsahar/terasky:0.0.2 # {"$imagepolicy": "flux-system:imagepolicy"}
+    repository: dsahar/terasky:0.0.2 # {"$imagepolicy": "flux-system:imagepolicy:name"}
+    tag: 0.0.2 # {"$imagepolicy": "flux-system:imagepolicy:tag"}
     replicaCount: 1

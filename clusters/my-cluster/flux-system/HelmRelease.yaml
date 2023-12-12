@@ -7,7 +7,6 @@ spec:
   interval: 5m
   chart:
     spec:
-      reconcileStrategy: "ImageUpdate"
       chart: ../../../Helm/Chart.yaml
       sourceRef:
         kind: GitRepository

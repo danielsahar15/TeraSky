@@ -7,13 +7,17 @@ spec:
   interval: 5m
   chart:
     spec:
-      chart: ../../../Helm/Chart.yaml
+      chart: hello
+      version: '0.1.0'
       sourceRef:
-        kind: GitRepository
-        name: git-repo-flux
+        kind: HelmRepository
+        name: chartmuseum
         namespace: flux-system
       interval: 1m
-  valuesFrom:
-    - kind: ConfigMap
-      name: values
-      valuesKey: values.yaml
+  upgrade:
+    remediation:
+      remediateLastFailure: true 
+  values:
+    image:
+    repository: dsahar/terasky:0.0.2 # {"$imagepolicy": "flux-system:imagepolicy"}
+    replicaCount: 1

@@ -3769,10 +3769,6 @@ spec:
                 description: Images is a list of (image name, new name, new tag or
                   digest) for changing image names, tags or digests. This can also
                   be achieved with a patch, but this operator is simpler to specify.
-                - name: terasky
-                  newName: dsahar/terasky # {"$imagepolicy": "flux-system:image-update:name"}
-                  newTag: latest # {"$imagepolicy": "flux-system:image-update:tag"}
-
                 items:
                   description: Image contains an image name, a new name, a new tag
                     or digest, which will replace the original name and tag.

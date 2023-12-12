@@ -3,3 +3,8 @@ kind: Kustomization
 resources:
 - gotk-components.yaml
 - gotk-sync.yaml
+
+images:
+  - name: terasky
+    newName: dsahar/terasky # {"$imagepolicy": "flux-system:image-update:name"}
+    newTag: latest # {"$imagepolicy": "flux-system:image-update:tag"}

@@ -1,7 +1,7 @@
-INSERT INTO vets (first_name, last_name) SELECT 'James', 'Carter' WHERE NOT EXISTS (SELECT * FROM vets WHERE id=1);
-INSERT INTO vets (first_name, last_name) SELECT 'Helen', 'Leary' WHERE NOT EXISTS (SELECT * FROM vets WHERE id=2);
-INSERT INTO vets (first_name, last_name) SELECT 'Linda', 'Douglas' WHERE NOT EXISTS (SELECT * FROM vets WHERE id=3);
-INSERT INTO vets (first_name, last_name) SELECT 'Rafael', 'Ortega' WHERE NOT EXISTS (SELECT * FROM vets WHERE id=4);
+INSERT INTO vets (first_name, last_name) SELECT 'Daniel', 'Sahar' WHERE NOT EXISTS (SELECT * FROM vets WHERE id=1);
+INSERT INTO vets (first_name, last_name) SELECT 'Lev', 'Andelman' WHERE NOT EXISTS (SELECT * FROM vets WHERE id=2);
+INSERT INTO vets (first_name, last_name) SELECT 'Tamir ', 'Yanko' WHERE NOT EXISTS (SELECT * FROM vets WHERE id=3);
+INSERT INTO vets (first_name, last_name) SELECT 'Oleg', 'Perstin' WHERE NOT EXISTS (SELECT * FROM vets WHERE id=4);
 INSERT INTO vets (first_name, last_name) SELECT 'Henry', 'Stevens' WHERE NOT EXISTS (SELECT * FROM vets WHERE id=5);
 INSERT INTO vets (first_name, last_name) SELECT 'Sharon', 'Jenkins' WHERE NOT EXISTS (SELECT * FROM vets WHERE id=6);
 

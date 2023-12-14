@@ -1,0 +1,27 @@
+#persistent-volume.yaml
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: chartmuseum-pv
+  namespace: chartmuseum
+  labels:
+    name: chartmuseum-pv
+spec:
+  capacity:
+   storage: 2Gi
+  volumeMode: Filesystem
+  accessModes:
+   - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Delete 
+  storageClassName: local-storage
+  local:
+    path: /mnt/chartmuseum # path on the disk of this PV
+  nodeAffinity: # nodeAffinity is required when using local volumes.
+    required:
+      nodeSelectorTerms:
+      - matchExpressions:
+        - key: kubernetes.io/hostname
+          operator: In
+          values:
+          - k8s2 #this is the hostname of the worker node
+          - k8s3 #this is the hostname of the worker node

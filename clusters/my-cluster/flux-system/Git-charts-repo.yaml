@@ -1,0 +1,15 @@
+apiVersion: source.toolkit.fluxcd.io/v1beta2
+kind: GitRepository
+metadata:
+  name: Git-charts-repo
+  namespace: flux-system
+spec:
+  interval: 5m
+  url: https://github.com/danielsahar15/terasky
+  ref:
+    branch: terasky
+  ignore: |-
+    # exclude all
+    /*
+    # include charts directory
+    !/Helm

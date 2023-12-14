@@ -72,8 +72,8 @@ metadata:
 secrets:
 - name: github-creds
 imagePullSecrets:
-- name: dockerhub-creds
-- name: dockerhubcred
+- name: dockerhub
+
 
 
 

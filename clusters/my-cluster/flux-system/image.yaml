@@ -1,10 +1,10 @@
 apiVersion: kpack.io/v1alpha2
 kind: Image
 metadata:
-  name: petclinic-image
+  name: terasky-petclinic
   namespace: default
 spec:
-  tag: dsahar/terasky:0.0.4
+  tag: dsahar/terasky-petclinic:0.0.1
   serviceAccountName: service-account
   build:
   builder:
@@ -14,3 +14,65 @@ spec:
     git:
       url: https://github.com/danielsahar15/terasky.git
       revision: terasky
+
+-------
+
+apiVersion: kpack.io/v1alpha2
+kind: ClusterStore
+metadata:
+  name: default
+  namespace: default
+spec:
+  sources:
+  - image: gcr.io/paketo-buildpacks/java
+  - image: gcr.io/paketo-buildpacks/nodejs
+
+---------
+
+apiVersion: kpack.io/v1alpha2
+kind: ClusterStack
+metadata:
+  name: base
+spec:
+  id: "io.buildpacks.stacks.bionic"
+  buildImage:
+    image: "paketobuildpacks/build:base-cnb"
+  runImage:
+    image: "paketobuildpacks/run:base-cnb"
+
+    
+---------
+
+
+apiVersion: kpack.io/v1alpha2
+kind: Builder
+metadata:
+  name: builder
+  namespace: default
+spec:
+  serviceAccountName: service-account
+  tag: dsahar/kpackbuilder
+  stack:
+    name: base
+    kind: ClusterStack
+  store:
+    name: default
+    kind: ClusterStore
+  order:
+  - group:
+    - id: paketo-buildpacks/java
+
+-----------
+
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: service-account
+  namespace: default
+secrets:
+secrets:
+- name: dockerhub-creds
+- name: github-creds
+--------------
+
+

@@ -10,5 +10,5 @@ resources:
 - chartmuseum/namespace.yaml
 - chartmuseum/persistent-volume.yaml
 - chartmuseum/persistent-volume-claim.yaml
-- Git-charts-repo.yaml
+- git-charts-repo.yaml
 

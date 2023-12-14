@@ -3,12 +3,10 @@ kind: Kustomization
 resources:
 - gotk-components.yaml
 - gotk-sync.yaml
-- HelmRelease.yaml
 - image.yaml
 - chartmuseum/HelmRepository.yaml
-- chartmuseum/storage-class.yaml
-- chartmuseum/namespace.yaml
-- chartmuseum/persistent-volume.yaml
-- chartmuseum/persistent-volume-claim.yaml
+- HelmRelease-HelmRepositoy-chartmuseum.yaml
 - git-charts-repo.yaml
+- HelmRelease-GitRepository.yaml
+
 

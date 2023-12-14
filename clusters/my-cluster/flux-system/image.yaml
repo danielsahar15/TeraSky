@@ -70,9 +70,9 @@ metadata:
   name: service-account
   namespace: default
 secrets:
-- name: dockerhub-creds
 - name: github-creds
-- name: dockerhubcred
+imagePullSecrets:
+- name: dockerhub-creds
 
 
 

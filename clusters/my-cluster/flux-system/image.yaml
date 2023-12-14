@@ -15,7 +15,7 @@ spec:
       url: https://github.com/danielsahar15/terasky.git
       revision: terasky
 
--------
+#-------
 
 apiVersion: kpack.io/v1alpha2
 kind: ClusterStore
@@ -27,7 +27,7 @@ spec:
   - image: gcr.io/paketo-buildpacks/java
   - image: gcr.io/paketo-buildpacks/nodejs
 
----------
+#---------
 
 apiVersion: kpack.io/v1alpha2
 kind: ClusterStack
@@ -41,7 +41,7 @@ spec:
     image: "paketobuildpacks/run:base-cnb"
 
     
----------
+#---------
 
 
 apiVersion: kpack.io/v1alpha2
@@ -62,7 +62,7 @@ spec:
   - group:
     - id: paketo-buildpacks/java
 
------------
+#-----------
 
 apiVersion: v1
 kind: ServiceAccount
@@ -73,6 +73,6 @@ secrets:
 secrets:
 - name: dockerhub-creds
 - name: github-creds
---------------
+#--------------
 
 

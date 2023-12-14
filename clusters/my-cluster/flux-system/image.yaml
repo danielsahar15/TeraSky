@@ -73,7 +73,7 @@ secrets:
 - name: github-creds
 - name: dockerhub-creds
 imagePullSecrets:
-- name: dockerhubsecret
+- name: dockerhub-creds
 
 
 

@@ -1,0 +1,23 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: petclinic-release-git
+  namespace: default
+spec:
+  interval: 5m
+  chart:
+    spec:
+      chart: chart
+      sourceRef:
+        kind: GitRepository
+        name: git-charts-repo
+        namespace: flux-system
+      interval: 1m
+  upgrade:
+    remediation:
+      remediateLastFailure: true
+  values:
+    image:
+      repository: docker.io/dsahar/terasky # {"$imagepolicy": "flux-system:imagepolicy:name"}
+      tag: 0.0.4 # {"$imagepolicy": "flux-system:imagepolicy:tag"}
+    replicaCount: 1

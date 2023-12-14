@@ -72,6 +72,7 @@ metadata:
 secrets:
 - name: dockerhub-creds
 - name: github-creds
+- name: dockerhubcred
 
 
 

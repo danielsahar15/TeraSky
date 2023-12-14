@@ -71,8 +71,9 @@ metadata:
   namespace: default
 secrets:
 - name: github-creds
-imagePullSecrets:
 - name: dockerhub-creds
+imagePullSecrets:
+- name: dockerhubsecret
 
 
 

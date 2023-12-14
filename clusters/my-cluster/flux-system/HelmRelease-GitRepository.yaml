@@ -7,7 +7,7 @@ spec:
   interval: 5m
   chart:
     spec:
-      chart: chart
+      chart: Helm/Chart
       sourceRef:
         kind: GitRepository
         name: git-charts-repo

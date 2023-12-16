@@ -1,3 +1,17 @@
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: service-account
+  namespace: default
+secrets:
+- name: github-creds
+- name: dockerhub
+imagePullSecrets:
+- name: dockerhub
+
+
+---
+
 apiVersion: kpack.io/v1alpha2
 kind: Image
 metadata:
@@ -64,16 +78,7 @@ spec:
 
 ---
 
-apiVersion: v1
-kind: ServiceAccount
-metadata:
-  name: service-account
-  namespace: default
-secrets:
-- name: github-creds
-- name: dockerhub
-imagePullSecrets:
-- name: dockerhub
+
 
 
 

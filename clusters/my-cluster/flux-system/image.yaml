@@ -68,7 +68,7 @@ apiVersion: v1
 kind: ServiceAccount
 metadata:
   name: service-account
-  namespace: default
+  namespace: flux-system
 secrets:
 - name: github-creds
 imagePullSecrets:

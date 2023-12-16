@@ -71,6 +71,7 @@ metadata:
   namespace: flux-system
 secrets:
 - name: github-creds
+- name: dockerhub
 imagePullSecrets:
 - name: dockerhub
 

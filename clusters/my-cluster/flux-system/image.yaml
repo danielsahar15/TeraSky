@@ -68,7 +68,7 @@ apiVersion: v1
 kind: ServiceAccount
 metadata:
   name: service-account
-  namespace: flux-system
+  namespace: default
 secrets:
 - name: github-creds
 - name: dockerhub

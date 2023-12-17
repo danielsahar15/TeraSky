@@ -15,10 +15,10 @@ imagePullSecrets:
 apiVersion: kpack.io/v1alpha2
 kind: Image
 metadata:
-  name: petclinic
+  name: petclinic-image
   namespace: default
 spec:
-  tag: dsahar/terasky
+  tag: dsahar/terasky:0.0.1
   serviceAccountName: service-account
   build:
   builder:

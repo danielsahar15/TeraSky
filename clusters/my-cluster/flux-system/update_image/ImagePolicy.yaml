@@ -7,8 +7,11 @@ spec:
   imageRepositoryRef:
     name: imagerepository
     namespace: flux-system
+  filterTags:
+    pattern: '^.+-[a-f0-9]+-(?P<ts>[0-9]+)'
+    extract: '$ts'
   policy:
-    semver:
-      range: '*'
+    numerical:
+      order: asc
 
 

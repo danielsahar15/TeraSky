@@ -8,8 +8,7 @@ spec:
     name: imagerepository
     namespace: flux-system
   filterTags:
-    pattern: '^.+-[a-f0-9]+-(?P<ts>[0-9]+)'
-    extract: '$ts'
+    pattern: 'latest'
   policy:
     numerical:
       order: asc

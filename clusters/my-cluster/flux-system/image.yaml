@@ -18,7 +18,7 @@ metadata:
   name: petclinic
   namespace: default
 spec:
-  tag: dsahar/terasky-petclinic
+  tag: dsahar/terasky
   serviceAccountName: service-account
   build:
   builder:

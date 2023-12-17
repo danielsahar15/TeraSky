@@ -20,5 +20,5 @@ spec:
     push:
       branch: terasky
   update:
-    path: .
+    path: ./clusters/my-cluster/flux-system
     strategy: Setters

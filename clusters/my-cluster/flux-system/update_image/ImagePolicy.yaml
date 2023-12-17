@@ -7,10 +7,7 @@ spec:
   imageRepositoryRef:
     name: imagerepository
     namespace: flux-system
-  filterTags:
-    pattern: 'latest'
   policy:
-    numerical:
-      order: asc
-
+    semver:
+      range: "*"
 

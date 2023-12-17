@@ -19,6 +19,8 @@ metadata:
   namespace: default
 spec:
   tag: dsahar/terasky
+  additionalTags:
+  - dsahar/terasky:0.0.3
   serviceAccountName: service-account
   build:
   builder:

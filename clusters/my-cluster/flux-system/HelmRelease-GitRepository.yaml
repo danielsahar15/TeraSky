@@ -19,5 +19,5 @@ spec:
   values:
     image:
       repository: docker.io/dsahar/terasky # {"$imagepolicy": "flux-system:imagepolicy:name"}
-      tag: 0.0.2 # {"$imagepolicy": "flux-system:imagepolicy:tag"}
+      tag: 0.0.3 # {"$imagepolicy": "flux-system:imagepolicy:tag"}
     replicaCount: 1

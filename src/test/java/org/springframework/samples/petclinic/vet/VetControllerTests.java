@@ -53,8 +53,8 @@ class VetControllerTests {
 
 	private Vet james() {
 		Vet james = new Vet();
-		james.setFirstName("James");
-		james.setLastName("Carter");
+		james.setFirstName("Oleg");
+		james.setLastName("Perstin");
 		james.setId(1);
 		return james;
 	}

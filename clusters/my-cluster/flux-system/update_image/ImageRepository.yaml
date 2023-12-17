@@ -1,0 +1,8 @@
+apiVersion: image.toolkit.fluxcd.io/v1beta2
+kind: ImageRepository
+metadata:
+  name: imagerepository
+  namespace: flux-system
+spec:
+  image: docker.io/dsahar/terasky
+  interval: 1m

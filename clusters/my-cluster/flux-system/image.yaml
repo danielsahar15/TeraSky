@@ -22,7 +22,7 @@ spec:
   serviceAccountName: service-account
   build:
   builder:
-    name: my-builder
+    name: builder
     kind: Builder
   source:
     git:

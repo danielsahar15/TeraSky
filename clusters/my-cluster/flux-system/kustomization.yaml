@@ -8,5 +8,8 @@ resources:
 - HelmRelease-HelmRepositoy-chartmuseum.yaml
 - git-charts-repo.yaml
 - HelmRelease-GitRepository.yaml
-- update_image/*.yaml
+- update_image/ImagePolicy.yaml
+- update_image/ImageRepository.yaml
+- update_image/ImageUpdateAutomation.yaml
+
 
